@@ -1,15 +1,8 @@
-// models/backup.js
 const mongoose = require('mongoose');
 
 const backupSchema = new mongoose.Schema({
-  data: {
-    type: Array,
-    required: true,
-  },
-  createdAt: {
-    type: Date,
-    default: Date.now,
-  },
+  fecha: { type: Date, default: Date.now },
+  data: { type: Array, required: true },
 });
 
 module.exports = mongoose.model('Backup', backupSchema);
